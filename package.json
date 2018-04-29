@@ -20,8 +20,7 @@
     "coveralls": "npm run test && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "jest": {
-    "testEnvironment": "node",
-    "verbose": true
+    "preset": "jest-preset-stylelint"
   },
   "dependencies": {
     "stylelint": "^9.2.0",
@@ -41,6 +40,7 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
-    "jest": "^22.4.3"
+    "jest": "^22.4.3",
+    "jest-preset-stylelint": "^1.3.0"
   }
 }

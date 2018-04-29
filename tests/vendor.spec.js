@@ -20,7 +20,7 @@ describe('if-else tags', () => {
     it('did not error', async () => {
       const data = await result
       expect(data.errored).toBeFalsy()
-    })
+    }, 10000)
 
     it('flags no warnings', async () => {
       const data = await result

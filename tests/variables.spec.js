@@ -17,12 +17,12 @@ describe('if-else tags', () => {
       })
     })
 
-    it('did not error', async () => {
+    it('did not error', () => {
       const data = await result
       expect(data.errored).toBeFalsy()
-    })
+    }, 10000)
 
-    it('flags no warnings', async () => {
+    it('flags no warnings', () => {
       const data = await result
       expect(data.results[0].warnings.length).toBe(0)
     })
@@ -38,17 +38,17 @@ describe('if-else tags', () => {
       })
     })
 
-    it('did error', async () => {
+    it('did error', () => {
       const data = await result
       expect(data.errored).toBeTruthy()
     })
 
-    it('flags correct number of warnings', async () => {
+    it('flags correct number of warnings', () => {
       const data = await result
       expect(data.results[0].warnings.length).toBe(5)
     })
 
-    it('flags correct rule warnings', async () => {
+    it('flags correct rule warnings', () => {
       const rules = [
         'scss/dollar-variable-colon-space-after',
         'scss/no-duplicate-dollar-variables',
