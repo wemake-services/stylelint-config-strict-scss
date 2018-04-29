@@ -14,7 +14,8 @@ Strict shareable config for stylelint and SCSS.
 - Also checks `@imports`, declarations, `url()`s, and other minor things
 - Enforces to use `autoprefixer` by restricting vendor prefixes
 - Maintains consistent declarations order with [`stylelint-order`](https://github.com/hudochenkov/stylelint-order)
-- Is opened for further extensions!
+- Has [sensible defaults](https://github.com/wemake-services/stylelint-config-strict-scss/blob/master/index.js)
+- Is opened for further extension!
 
 
 ## Installation
