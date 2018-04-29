@@ -17,7 +17,7 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "test": "jest --coverage",
-    "coveralls": "npm run test && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "coveralls": "npm run test && cat ./.coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "jest": {
     "preset": "jest-preset-stylelint"

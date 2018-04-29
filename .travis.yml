@@ -16,6 +16,14 @@ script:
   - yarn lint
   - yarn coveralls
 
+deploy:
+  provider: npm
+  email: "$NPM_DEPLOY_EMAIL"
+  api_key: "$NPM_DEPLOY_TOKEN"
+  on:
+    branch: master
+    tags: true
+
 notifications:
   email:
     on_success: never
