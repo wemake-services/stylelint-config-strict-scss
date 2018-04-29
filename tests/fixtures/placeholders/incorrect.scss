@@ -1,0 +1,7 @@
+%absctract_div {
+  display: block;
+}
+
+div {
+  @extend %absctract_div;
+}

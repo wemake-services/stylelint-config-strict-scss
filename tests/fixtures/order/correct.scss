@@ -1,0 +1,35 @@
+%base {
+  display: block;
+}
+
+@mixin without-block () {
+  padding: 10px;
+}
+
+@mixin with-block () {
+  .child {
+    @content;
+  }
+}
+
+.namespaced {
+  $color: #444;
+
+  @extend %base;
+
+  @include without-block();
+
+  color: $color;
+
+  @include with-block() {
+    margin: 0;
+  }
+
+  .custom-rule {
+    color: #333;
+  }
+
+  @media screen and (min-width: 400px) {
+    width: 40px;
+  }
+}

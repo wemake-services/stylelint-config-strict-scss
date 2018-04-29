@@ -1,0 +1,18 @@
+a {
+  display: flex;
+  transform: scale(1);
+}
+
+input::placeholder {
+  color: #333;
+}
+
+@media (max-resolution: 900dpi) {
+  display: none;
+}
+
+@keyframes {
+  0% {
+    top: 0;
+  }
+}

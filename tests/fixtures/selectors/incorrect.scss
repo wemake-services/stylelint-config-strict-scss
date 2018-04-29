@@ -1,0 +1,9 @@
+p {
+  & a {
+    display: flex;
+  }
+}
+
+[target=_blank] {
+  display: none;
+}

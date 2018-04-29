@@ -1,0 +1,46 @@
+{
+  "name": "stylelint-config-strict-scss",
+  "version": "0.1.0",
+  "description": "Strict shareable config for stylelint and SCSS",
+  "main": "index.js",
+  "repository": "https://github.com/wemake-services/stylelint-config-strict-scss.git",
+  "author": "Nikita Sobolev <mail@sobolevn.me>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "scss",
+    "stylelint-scss",
+    "standard"
+  ],
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "jest --coverage",
+    "coveralls": "npm run test && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "dependencies": {
+    "stylelint": "^9.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "jest": "^22.4.3"
+  }
+}
