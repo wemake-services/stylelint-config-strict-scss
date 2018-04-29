@@ -17,18 +17,18 @@ describe('if-else tags', () => {
       })
     })
 
-    it('did not error', () => {
+    it('did not error', async () => {
       const data = await result
       expect(data.errored).toBeFalsy()
     }, 10000)
 
-    it('flags no warnings', () => {
+    it('flags no warnings', async () => {
       const data = await result
       expect(data.results[0].warnings.length).toBe(0)
     })
   })
 
-  describe('incorrect style', () => {
+  describe('incorrect style', async () => {
     let result
 
     beforeEach(() => {
@@ -38,17 +38,17 @@ describe('if-else tags', () => {
       })
     })
 
-    it('did error', () => {
+    it('did error', async () => {
       const data = await result
       expect(data.errored).toBeTruthy()
     })
 
-    it('flags correct number of warnings', () => {
+    it('flags correct number of warnings', async () => {
       const data = await result
       expect(data.results[0].warnings.length).toBe(1)
     })
 
-    it('flags correct rule warnings', () => {
+    it('flags correct rule warnings', async () => {
       const rules = [
         'scss/percent-placeholder-pattern'
       ]
