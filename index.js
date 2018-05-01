@@ -9,17 +9,13 @@
 
 module.exports = {
   extends: [
-    'stylelint-config-standard'
+    'stylelint-config-standard',
+    'stylelint-config-recommended-scss'
   ],
   plugins: [
-    'stylelint-scss',
     'stylelint-order'
   ],
   rules: {
-    // fixing grammar
-    'at-rule-no-unknown': null,
-    'scss/at-rule-no-unknown': true,
-
     // base
     'max-nesting-depth': 3, // just google 'the-inception-rule'
 
