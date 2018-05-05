@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-strict-scss",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Strict shareable config for stylelint and SCSS",
   "main": "index.js",
   "repository": "https://github.com/wemake-services/stylelint-config-strict-scss.git",
