@@ -13,7 +13,7 @@
 }
 
 .namespaced {
-  $color: #444;
+  $color: rgba(12, 14, 122, 0.2);
 
   @extend %base;
 
@@ -26,7 +26,7 @@
   }
 
   .custom-rule {
-    color: #333;
+    color: rgb(12, 12, 12);
   }
 
   @media screen and (min-width: 400px) {

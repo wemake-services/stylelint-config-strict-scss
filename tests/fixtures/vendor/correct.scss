@@ -4,14 +4,14 @@ a {
 }
 
 input::placeholder {
-  color: #333;
+  color: rgb(13, 19, 122);
 }
 
 @media (max-resolution: 900dpi) {
   display: none;
 }
 
-@keyframes {
+@keyframes test {
   0% {
     top: 0;
   }

@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-strict-scss",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Strict shareable config for stylelint and SCSS",
   "main": "index.js",
   "repository": "https://github.com/wemake-services/stylelint-config-strict-scss.git",
@@ -23,7 +23,9 @@
     "preset": "jest-preset-stylelint"
   },
   "dependencies": {
+    "style-search": "^0.1.0",
     "stylelint": "^9.2.0",
+    "stylelint-color-format": "^0.1.1",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.8.1",
@@ -36,11 +38,14 @@
     "coveralls": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
+    "eslint-config-wemake": "^0.4.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-unicorn": "^4.0.3",
     "jest": "^23.0.1",
     "jest-preset-stylelint": "^1.3.0"
   }

@@ -4,14 +4,14 @@ a {
 }
 
 input::-moz-placeholder {
-  color: #333;
+  color: rgb(13, 19, 122);
 }
 
 @media (-webkit-min-device-pixel-ratio: 1) {
   display: none;
 }
 
-@-webkit-keyframes {
+@-webkit-keyframes test {
   0% {
     top: 0;
   }

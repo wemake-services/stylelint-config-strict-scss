@@ -12,12 +12,20 @@ module.exports = {
     'stylelint-config-standard',
     'stylelint-config-recommended-scss'
   ],
+
   plugins: [
-    'stylelint-order'
+    'stylelint-order',
+    // This currently does not work
+    // See github.com/wemake-services/stylelint-config-strict-scss/issues/18
+    // 'stylelint-declaration-strict-value',
+    'stylelint-color-format'
   ],
+
   rules: {
     // base
     'max-nesting-depth': 3, // just google 'the-inception-rule'
+    'max-line-length': 80,
+    'string-quotes': 'single',
 
     // order
     'order/order': [
@@ -35,9 +43,9 @@ module.exports = {
         },
         'declarations',
         {
-          'type': 'at-rule',
-          'name': 'include',
-          'hasBlock': true
+          type: 'at-rule',
+          name: 'include',
+          hasBlock: true
         },
         'rules',
         'at-rules'
@@ -47,6 +55,9 @@ module.exports = {
     // url() function
     'function-url-no-scheme-relative': true, // use explicit https
     'function-url-quotes': 'always',
+
+    // fonts
+    'font-weight-notation': 'numeric',
 
     // vendor prefixes are forbidden, use autoprefixer
     'at-rule-no-vendor-prefix': true,
@@ -89,6 +100,9 @@ module.exports = {
 
     // scss selectors
     'selector-attribute-quotes': 'always',
+    'selector-max-universal': 1,
+    'selector-max-specificity': '1,3,3', // id,class,type
+    'selector-max-compound-selectors': 3,
     'scss/selector-no-redundant-nesting-selector': true,
 
     // scss imports
@@ -115,6 +129,10 @@ module.exports = {
     'scss/at-else-empty-line-before': 'never',
     'scss/at-else-if-parentheses-space-before': 'always',
     'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
-    'scss/at-if-closing-brace-space-after': 'always-intermediate'
+    'scss/at-if-closing-brace-space-after': 'always-intermediate',
+
+    // using only rgb colors
+    'color-named': 'never',
+    'color-format/format': { format: 'rgb' }
   }
 }
