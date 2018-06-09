@@ -77,9 +77,10 @@ const checks = {
   order: true,
 
   placeholders: {
-    errors: 1,
+    errors: 2,
     messages: [
-      'scss/percent-placeholder-pattern'
+      'scss/percent-placeholder-pattern',
+      'scss/at-extend-no-missing-placeholder'
     ]
   },
 

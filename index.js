@@ -7,6 +7,10 @@
 
 'use strict'
 
+const namePattern = '[a-z]+([a-z0-9-]+[a-z0-9]+)?$'
+const publicNamePattern = `^${namePattern}`
+const privateNamePattern = `^[_]?${namePattern}`
+
 module.exports = {
   extends: [
     'stylelint-config-standard',
@@ -76,22 +80,23 @@ module.exports = {
     'scss/dollar-variable-no-missing-interpolation': true,
     'scss/dollar-variable-colon-space-after': 'always',
     'scss/dollar-variable-colon-space-before': 'never',
-    'scss/dollar-variable-pattern': '^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
+    'scss/dollar-variable-pattern': privateNamePattern,
     'scss/no-duplicate-dollar-variables': true,
 
     // scss placeholders
-    'scss/percent-placeholder-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
+    'scss/percent-placeholder-pattern': publicNamePattern,
+    'scss/at-extend-no-missing-placeholder': true,
 
     // scss mixins
     'scss/at-mixin-named-arguments': 'always',
     'scss/at-mixin-parentheses-space-before': 'always',
     'scss/at-mixin-argumentless-call-parentheses': 'always',
-    'scss/at-mixin-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
+    'scss/at-mixin-pattern': publicNamePattern,
 
     // scss functions
     'scss/at-function-named-arguments': 'always',
     'scss/at-function-parentheses-space-before': 'always',
-    'scss/at-function-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
+    'scss/at-function-pattern': publicNamePattern,
 
     // scss operators
     'scss/operator-no-newline-before': true,

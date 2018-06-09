@@ -5,3 +5,11 @@
 div {
   @extend %absctract_div;
 }
+
+.do-not-extend-me {
+  width: 100px;
+}
+
+.i-will-extend-you {
+  @extend .do-not-extend-me;
+}
