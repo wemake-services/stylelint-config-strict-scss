@@ -6,11 +6,12 @@
 }
 
 .with-empty-line {
-  display: block;
+  display: inline;
   width: 100px;
   height: 100px;
 
   color: green;
   background: #333;
   font-weight: bold;
+  font-family: serif;
 }

@@ -19,9 +19,8 @@ module.exports = {
 
   plugins: [
     'stylelint-order',
-    // This currently does not work
-    // See github.com/wemake-services/stylelint-config-strict-scss/issues/18
-    // 'stylelint-declaration-strict-value',
+    'stylelint-declaration-strict-value',
+    'stylelint-declaration-block-no-ignored-properties',
     'stylelint-color-format'
   ],
 
@@ -63,6 +62,11 @@ module.exports = {
     // fonts
     'font-weight-notation': 'numeric',
 
+    // media queries
+    'media-feature-name-no-unknown': true,
+    'media-query-list-comma-newline-before': 'never-multi-line',
+    'scss/media-feature-value-dollar-variable': 'always',
+
     // vendor prefixes are forbidden, use autoprefixer
     'at-rule-no-vendor-prefix': true,
     'media-feature-name-no-vendor-prefix': true,
@@ -75,6 +79,16 @@ module.exports = {
 
     // scss declarations
     'scss/declaration-nested-properties': 'never',
+    'plugin/declaration-block-no-ignored-properties': true,
+    'scale-unlimited/declaration-strict-value': [
+      ['/color/', 'z-index', 'font-size', 'font-family'],
+      {
+        ignoreKeywords: {
+          '': ['inherit'],
+          '/color/': ['currentColor', 'transparent', 'inherit']
+        }
+      }
+    ],
 
     // scss variables
     'scss/dollar-variable-no-missing-interpolation': true,

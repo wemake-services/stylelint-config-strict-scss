@@ -7,7 +7,9 @@ input::placeholder {
   color: rgb(13, 19, 122);
 }
 
-@media (max-resolution: 900dpi) {
+$resolution: 900dpi;
+
+@media (max-resolution: $resolution) {
   display: none;
 }
 

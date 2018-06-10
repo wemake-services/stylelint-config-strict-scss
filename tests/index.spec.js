@@ -1,17 +1,19 @@
 'use strict'
 
-const path = require('path')
-const stylelint = require('stylelint')
+import path from 'path'
+import stylelint from 'stylelint'
 
 // eslint-disable-next-line unicorn/import-index
-const config = require('../')
+import config from '../'
 
 const fixturesDir = path.resolve(__dirname, 'fixtures')
 
 const checks = {
   declarations: {
-    errors: 5,
+    errors: 9,
     messages: [
+      'scale-unlimited/declaration-strict-value',
+      'plugin/declaration-block-no-ignored-properties',
       'declaration-empty-line-before',
       'scss/declaration-nested-properties',
       'font-weight-notation',
@@ -51,6 +53,14 @@ const checks = {
     messages: [
       'scss/at-import-no-partial-leading-underscore',
       'scss/at-import-partial-extension-blacklist'
+    ]
+  },
+
+  'media-queries': {
+    errors: 2,
+    messages: [
+      'scss/media-feature-value-dollar-variable',
+      'media-feature-name-no-unknown'
     ]
   },
 
@@ -127,15 +137,19 @@ const checks = {
   }
 }
 
+function runStylelint (fixtureName, filename) {
+  return stylelint.lint({
+    files: path.join(fixturesDir, fixtureName, filename),
+    config
+  })
+}
+
 function createCorrectStyleCheck (name, rule) {
   describe('correct style', () => {
     let result
 
     beforeAll(() => {
-      result = stylelint.lint({
-        files: path.join(fixturesDir, name, 'correct.scss'),
-        config
-      })
+      result = runStylelint(name, 'correct.scss')
     })
 
     test('flags no warnings', async () => {
@@ -155,10 +169,7 @@ function createIncorrectStyleCheck (name, rule) {
     let result
 
     beforeAll(() => {
-      result = stylelint.lint({
-        files: path.join(fixturesDir, name, 'incorrect.scss'),
-        config
-      })
+      result = runStylelint(name, 'incorrect.scss')
     })
 
     test('flags correct number of warnings', async () => {
