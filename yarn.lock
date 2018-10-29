@@ -5269,9 +5269,9 @@ stylehacks@^2.3.2:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint-color-format@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/stylelint-color-format/-/stylelint-color-format-0.1.1.tgz#47f19bba4711d12f3e8b25fc6e97a3b2ffebf723"
+stylelint-color-format@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/stylelint-color-format/-/stylelint-color-format-0.2.0.tgz#b0bb2ce504d66da98564bead3f6c170d8d7b1284"
   dependencies:
     color "^3.0.0"
 
