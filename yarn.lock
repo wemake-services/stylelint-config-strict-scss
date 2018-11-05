@@ -5351,8 +5351,8 @@ stylelint-declaration-block-no-ignored-properties@^1.1.0:
     postcss "^6.0.11"
 
 stylelint-declaration-strict-value@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/stylelint-declaration-strict-value/-/stylelint-declaration-strict-value-1.0.4.tgz#8b20790cd71af7e4f65b28ec269981c6417b7179"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-declaration-strict-value/-/stylelint-declaration-strict-value-1.1.0.tgz#0a476edba8f0cfea29ab9ebd31e343a149d06b18"
   dependencies:
     stylelint "^7.6.0"
 
